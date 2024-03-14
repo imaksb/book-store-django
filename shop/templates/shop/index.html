@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <title>Document</title>
+  </head>
+
+  <div class="advertisement modal accept">
+      <p class="timer"></p>
+      <a class="modal-action-button">X</a>
+
+    <div class="main-content">
+        <h1>Тут могла б бути корисна реклама</h1>
+        <p>Всього дві хвилини на день...</p>
+    </div> 
+</div>
+
+<div class="book-modal modal">
+    <a class="modal-action-button">X</a>
+   <div class="main-content">
+      <h1>Назва</h1>
+      <p>Опис</p>
+  </div> 
+</div>
+
+  <div class="accept modal">
+      <div class="main-content">
+          <h1>Підпишіться на повідомлення від нас</h1> 
+      </div>
+      
+    <div class="accept-button">
+      <button class="book_button acceptButton">Accept</button>
+      <button class="book_button acceptButton">Decline</button>
+    </div>
+  </div>
+  <body>
+    <header class="main-header">
+      <h1>📘 The Best Book Store.</h1>
+
+      <nav>
+        <a href="#">Магазин</a>
+        <a href="#">Акції</a>
+        <a href="#">Программа лояльності</a>
+        <a href="#">Повернення</a>
+        <a href="#">Про нас</a>
+      </nav>
+    </header>
+
+    <header class="poster">
+      <div class="poster-text">
+        <h2>The world belongs to those who read.</h2>
+        <p>Rick Holland</p>
+      </div>
+      <img src="{% static 'media/default/book-poster.svg' %}" alt="" srcset="" />
+    </header>
+
+    <header class="shop">
+      <div class="filters">
+        <a id='all' class="a-clicked filter">Всі</a>
+        <a id="e-book" class="filter">Електронні</a>
+        <a id="paperback" class="filter">Паперові</a>
+        <a id="hardcover" class="filter">Тврерда палітурка</a>
+      </div>
+
+      <div class="products"></div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/push_advertisement.js' %}"></script>
+    <script src="{% static 'js/products_worker.js' %}"></script>
+    <script src="{% static 'js/subscription.js' %}"></script>
+    <script src="{% static 'js/product_info.js' %}"></script>
+     >
+  
+{#    <script src="data/comics.js"></script>#}
+{#    <script src="assets/js/index.js"></script>#}
+  </body>
+</html>

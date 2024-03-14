@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #343a40;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  justify-content: space-between;
+  background-color: #433e3f;
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header a {
+  color: aliceblue;
+  margin-right: 30px;
+}
+
+.main-header a:hover {
+  color: #f59054;
+}
+
+.poster img {
+  height: 300px;
+  width: auto;
+}
+
+.poster-text h2 {
+  font-family: serif;
+  letter-spacing: 2px;
+  font-size: 50px;
+  width: 250px;
+  word-wrap: break-word;
+}
+
+.poster-text p {
+  font-size: 15px;
+  color: #363636;
+  flex: 1 0;
+}
+
+.poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  height: 600px;
+  background-color: #e4e3e3;
+  margin-bottom: 50px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.filters a {
+  /*color: #000000;*/
+}
+
+.filters a:hover {
+  color: #f59054;
+}
+
+.a-clicked {
+  border-bottom: solid 3px;
+}
+
+.products {
+  display: grid;
+  margin: 50px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: 400px 400px;
+  gap: 40px;
+}
+.product {
+  justify-self: center;
+  padding: 44px;
+  background: #f6f6f6;
+  border-radius: 15px;
+}
+.product img {
+  width: 144px;
+  height: 208px;
+}
+
+/* .info-section {
+  display: flex;
+  justify-content: center;
+} */
+.book_button_info {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: solid 1px #f59054;
+  transition: all 0.5s;
+}
+
+.book_button_info:hover {
+  color: #f6f6f6;
+  background-color: #f59054;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.book-detail {
+  display: grid;
+  align-items: end;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+}
+
+.main-information p {
+  font-size: 15px;
+  display: block;
+}
+.info-section {
+  margin-top: 20px;
+}
+.modal {
+  padding: 50px;
+  color: #fff;
+  border-radius: 20px;
+  display: none;
+  background-color: #23a2f6;
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.modal a {
+  right: 10%;
+  top: 7%;
+  position: fixed;
+}
+.modal-action-button {
+  display: none;
+}
+
+.filters a:hover {
+  cursor: pointer;
+}
+
+.accept-button {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.accept-button button {
+  width: 50%;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+     
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <form method="post" action="{% url 'authorization:login_view' %}">
+        {% csrf_token %}
+        
+            <a href="{% url 'index' %}" class="previous round">&#8249;</a>
+            <h3>Login Here</h3>
+        
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username">
+    
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="password">
+    
+        <button type="submit">Log In</button>
+    
+    
+        <div class="error_msg">
+            {% if error_message %}
+                {{ error_message }}
+            {% endif %}
+        </div>
+    </form>
+
+    <!-- <section>
+        <a href="{% url 'authorization:register_view' %}">Register if u dont have an account xd</a>
+    </section>
+    <section>
+        <a href="{% url 'index' %}">Go to shop</a>
+    </section> -->
+</body>
+</html>

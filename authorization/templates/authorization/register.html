@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+     
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <form method="post" action="{% url 'authorization:register_view' %}">
+        {% csrf_token %}
+        
+            <a href="{% url 'index' %}" class="previous round">&#8249;</a>
+            <h3>Register Here</h3>
+        
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Username">
+    
+        <label for="password1">Password</label>
+        <input type="password" name="password1" id="password1" placeholder="Password">
+
+        <label for="password2">Confirm password</label>
+        <input type="password" name="password2" id="password2" placeholder="Confirm password">
+    
+        <button type="submit">Register</button>
+    
+    
+        <div class="error_msg">
+            {% if error_message %}
+                {{ error_message }}
+            {% endif %}
+        </div>
+    </form>
+
+    <!-- <section>
+        <a href="{% url 'authorization:register_view' %}">Register if u dont have an account xd</a>
+    </section>
+    <section>
+        <a href="{% url 'index' %}">Go to shop</a>
+    </section> -->
+</body>
+</html>
